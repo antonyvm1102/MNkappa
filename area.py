@@ -128,5 +128,7 @@ def principle_stress_section(sig_x, tau, sig_z=None):
     sig_z = np.zeros(sig_x.shape)
     sig1 = (sig_x + sig_z) / 2 + (((sig_x - sig_z) / 2) ** 2 + tau ** 2) ** 0.5
     sig2 = (sig_x + sig_z) / 2 - (((sig_x - sig_z) / 2) ** 2 + tau ** 2) ** 0.5
-    theta = np.degrees(np.arctan((2 * tau / (sig_x - sig_z)) / 2))
+    theta = np.degrees(np.arctan((2 * tau / (sig_x - sig_z)))/2)
     return sig1, sig2, theta
+
+
